@@ -34,3 +34,4 @@ alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
 
+alias subl='/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe'
