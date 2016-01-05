@@ -26,7 +26,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}x"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}o"
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $ 
-RPROMPT="%{${_lineup}%}${git_info} %{$fg[white]%}[%*]%{${_linedown}%}"
+RPROMPT="%{${_lineup}%}${git_info} %{$fg[white]%}[20%D][%T]%{${_linedown}%}"
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
 %{$fg[cyan]%}%n\
