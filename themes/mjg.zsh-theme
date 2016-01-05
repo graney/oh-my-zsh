@@ -14,6 +14,10 @@ function box_name {
 # Directory info.
 local current_dir='${PWD/#$HOME/~}'
 
+_newline=$'\n'
+_lineup=$'\e[1A'
+_linedown=$'\e[1B'
+
 # Git info.
 local git_info='$(git_prompt_info)'
 ZSH_THEME_GIT_PROMPT_PREFIX="git:%{$fg[cyan]%}"
@@ -22,7 +26,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}x"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}o"
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $ 
-RPROMPT="${git_info} %{$fg[white]%}[%*]"
+RPROMPT="%{${_lineup}%}${git_info} %{$fg[white]%}[%*]%{${_linedown}%}"
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
 %{$fg[cyan]%}%n\
